@@ -1,22 +1,20 @@
 // src/App.js
 import React from "react";
-import Header from "./components/Header";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
 import "./App.css";
+import LeftSidebar from "./components/LeftSidebar/LeftSidebar";
+import MainContent from "./components/MainContent/MainContent";
+import RightNavbar from "./components/RightNavbar/RightNavbar";
+import { IoSettingsOutline } from "react-icons/io5";
+
 function App() {
   return (
-    <div>
-      <Header />
-      <main>
-        <About />
-        <Skills />
-        <Projects />
-        
-      </main>
-      <Footer />
+    <div className="app-container">
+      <div className="top-left-icon">
+        <IoSettingsOutline />
+      </div>
+      <LeftSidebar />
+      <MainContent />
+      <RightNavbar />
     </div>
   );
 }

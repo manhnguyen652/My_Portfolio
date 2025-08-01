@@ -1,0 +1,129 @@
+
+.left-sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #c0c0c0;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+.availability .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #FF8F5E;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-card {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  text-align: center;
+  height: calc(100% - 80px); 
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.profile-image-container {
+    margin-top: 10px;
+  position: relative;
+}
+
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 5px solid #101010;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-name {
+  font-family: 'Pacifico', cursive; 
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 10px 0 20px 0; 
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.profile-email {
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.profile-location {
+  color: #808080;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: auto; 
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #c0c0c0;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #fff;
+  color: #101010;
+}
+
+.get-started-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 25px;
+  background-color: #252525;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+  background-color: #333;
+}
+
+.get-started-btn svg {
+  background-color: #fff;
+  color: #101010;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.5rem;
+}
