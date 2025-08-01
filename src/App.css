@@ -1,25 +1,266 @@
-/* src/App.css */
+/* Import font từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Pacifico&display=swap');
+
+/* --- Cài đặt chung & Nền --- */
+body {
+  background-color: #000000 !important;
+ background-image: url('./assets/images/back-1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: #EAEAEA !important;
+}
 
 .app-container {
-  display: grid;
-  grid-template-columns: 380px 1fr 100px; /* Cột trái | Nội dung | Cột phải */
-  align-items: center;
-  height: 100vh;
-  padding: 2rem 3rem;
-  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   position: relative;
 }
 
-.top-left-icon {
-  position: absolute;
-  top: 40px;
-  left: 40px;
+.sidebar-settings-icon {
   font-size: 1.5rem;
   color: #a0a0a0;
   cursor: pointer;
+  padding-left: 15px; 
+  margin-bottom: 20px; 
+  display: inline-block; 
   transition: color 0.3s ease;
 }
 
-.top-left-icon:hover {
-  color: #ffffff;
+.sidebar-settings-icon:hover {
+  color: #fff;
+}
+
+/* --- Thanh bên trái (Left Sidebar) --- */
+.availability {
+  display: flex;
+  align-items: center;
+  color: #c0c0c0;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+.availability .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #FF8F5E;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-card-custom {
+  background: rgba(22, 22, 22, 0.7) !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 25px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 20px;
+   min-height: 600px; 
+  width: 100%;
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* --- Hiệu ứng nền gradient cho ảnh --- */
+.profile-image-wrapper {
+  margin-top: -95px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px; 
+  background-image: linear-gradient(to top, #D41A2B, #FD862E);
+  border-radius: 25px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+}
+/* -------------------------------------- */
+
+.profile-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  margin-top: -45px;
+  font-weight: 400;
+  color: #fff;
+}
+.profile-email { color: #b0b0b0; }
+.profile-location { color: #808080; font-size: 0.9rem; }
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #2A2A2A;
+  border-radius: 50%;
+  color: #c0c0c0;
+  margin: 0 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+/* Thêm vào đây */
+.social-icons {
+  margin-top: auto; /* Tự động đẩy các icon và nút bấm xuống */
+}
+.social-icons a:hover {
+  background-color: #fff;
+  color: #101010;
+}
+
+.get-started-btn-custom {
+  background-color: #252525 !important;
+  border: none !important;
+  border-radius: 15px !important;
+  padding: 18px 25px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-size: 1rem !important;
+}
+.get-started-btn-custom:hover {
+    background-color: #333 !important;
+}
+.get-started-btn-custom svg {
+  background-color: #fff;
+  color: #101010;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+/* --- Nội dung chính (Main Content) --- */
+.main-content-custom { color: #EAEAEA; }
+.location-time {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #a0a0a0;
+}
+.introduction { color: #c0c0c0; }
+.main-heading { font-size: 3.5rem; font-weight: 700; line-height: 1.2; color: #fff; }
+.description { color: #a0a0a0; max-width: 500px; }
+
+.tag-custom {
+  background-color: #252525 !important;
+  color: #c0c0c0;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-weight: 500 !important;
+}
+
+/* --- Thanh điều hướng phải (Right Navbar) --- */
+.right-navbar-custom {
+  background-color: #1C1C1C;
+  border-radius: 30px;
+  padding: 15px 5px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.nav-icon-custom {
+  color: #707070 !important;
+  font-size: 1.5rem !important;
+  width: 48px;
+  height: 48px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px; /* Hình dạng bo tròn như trong ảnh */
+  margin: 10px auto;
+  transition: all 0.3s ease;
+}
+.nav-icon-custom:hover {
+  color: #fff !important;
+}
+
+/* --- Nút Active chính xác như trong ảnh --- */
+.nav-icon-custom.active {
+  background-color: #FFFFFF !important;
+  color: #101010 !important;
+}
+
+/* --- CSS Responsive cho Tablet & Mobile --- */
+@media (max-width: 767px) {
+  .app-container {
+    padding-bottom: 100px; /* Khoảng trống cho nav bar */
+  }
+
+  .main-content-custom, .profile-card-custom {
+    text-align: center;
+  }
+
+  .main-heading { font-size: 2.5rem; }
+
+  .location-time {
+    position: static;
+    transform: none;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-button-custom {
+  background-color: #1C1C1C !important;
+  border: none !important;
+  border-radius: 14px !important;
+  font-size: 1.5rem;
+  padding: 8px 10px !important;
+  line-height: 1;
+   position: fixed; /* Sử dụng fixed để giữ vị trí khi cuộn */
+   top: 20px;       /* Điều chỉnh khoảng cách từ đỉnh */
+   right: 20px;     /* Điều chỉnh khoảng cách từ bên phải */
+   z-index: 1050;  
+}
+
+/* --- Tùy chỉnh Offcanvas Panel --- */
+.offcanvas-custom {
+  background-color: #1C1C1C !important;
+  color: #EAEAEA !important;
+}
+
+.offcanvas-custom .nav-icon-custom {
+  margin: 5px auto; /* Giảm khoảng cách cho vừa panel */
+}
+  .nav-icon-custom {
+      margin: 5px 0;
+  }
+}
+/* Thêm đoạn CSS này vào cuối file App.css */
+
+.nav-item-offcanvas {
+    display: flex !important;
+    align-items: center;
+    /* Căn các mục về bên trái thay vì ra giữa */
+    justify-content: flex-start !important;
+    color: #c0c0c0 !important;
+    padding: 15px 20px !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1rem !important;
+    font-weight: 500;
+}
+
+/* Định dạng cho icon bên trong mục menu */
+.nav-item-offcanvas svg {
+    font-size: 1.5rem;
+    /* Tạo khoảng cách giữa icon và văn bản */
+    margin-right: 15px;
+}
+
+/* Hiệu ứng khi rê chuột */
+.nav-item-offcanvas:hover {
+    background-color: #2A2A2A;
+    color: #fff !important;
+}
+
+/* Định dạng cho mục đang được chọn (active) */
+.nav-item-offcanvas.active {
+    background-color: #FE8D5B !important;
+    color: #101010 !important;
 }
